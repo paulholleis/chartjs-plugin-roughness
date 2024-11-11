@@ -7,7 +7,8 @@ Tooltip._element.prototype.drawBackground = function (pt, ctx, ts, op) {
     originalDrawBackground.apply(this, arguments);
     return;
   }
+  const org = ctx.canvas._roughEnabled
   ctx.canvas._roughEnabled = false
   originalDrawBackground.apply(this, arguments)
-  ctx.canvas._roughEnabled = true
+  ctx.canvas._roughEnabled = org
 }
