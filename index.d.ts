@@ -10,6 +10,7 @@ declare global {
 }
 
 declare module 'chart.js' {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface PluginOptionsByType<TType extends ChartType> {
     roughness: {
       disabled?: boolean
@@ -18,6 +19,7 @@ declare module 'chart.js' {
 }
 
 declare module 'chart.js/dist/types/index' {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface TooltipOptions<TType extends ChartType = ChartType> {
     // set true to use roughness draw tooltip background.
     preventSkipBackgroundRoughness: boolean
